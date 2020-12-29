@@ -1,5 +1,5 @@
 // App Link : https://apkpure.com/lock-screen/com.idev.app.security.lockscreen
-// Thanks for phhusson for help to reduce cpu usage
+// Thanks for phhusson ;because helping to reduce cpu usage
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
