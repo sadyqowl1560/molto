@@ -5,14 +5,10 @@
 #include <unistd.h>
 void main(void)
 {
-  int run_or_no;
-  int works_or_stopped;
   while( 1 ) 
   {
-    run_or_no = system("pidof com.idev.app.security.lockscreen");
-    works_or_stopped = system("dumpsys activity services | grep com.idev.app.security.lockscreen/idev.lockscreen.control.LockScreenService");
-    if (run_or_no == 0) {
-      if (works_or_stopped != 0) {
+    if (system("pidof com.idev.app.security.lockscreen") == 0) {
+      if (system("dumpsys activity services | grep com.idev.app.security.lockscreen/idev.lockscreen.control.LockScreenService") != 0) {
         system("pm enable com.idev.app.security.lockscreen");
         system("pm enable com.idev.app.security.lockscreen/idev.lockscreen.activity.MainActivity");
         system("input keyevent 26");
