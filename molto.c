@@ -18,7 +18,7 @@ void main(void)
         system("input keyevent 26");
         system("lockscreen");
         system("am startservice com.idev.app.security.lockscreen/idev.lockscreen.activity.MainActivity");
-        system("log -p i ", "Molto : Do not worry , I am here sir");
+        system("log -p i Molto : Do not worry , I am here sir");
       }
     }
     else {
