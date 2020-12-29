@@ -7,7 +7,7 @@ void main(void)
 {
   int run_or_no;
   int works_or_stopped;
-  while( true ) 
+  while( 1 ) 
   {
     run_or_no = system("pidof com.idev.app.security.lockscreen");
     works_or_stopped = system("dumpsys activity services | grep com.idev.app.security.lockscreen/idev.lockscreen.control.LockScreenService");
