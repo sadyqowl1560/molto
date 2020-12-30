@@ -6,8 +6,8 @@
 void main(void)
 {
 saver_battery :
- if(system("dumpsys power |grep mHoldingWakeLockSuspendBlocker |grep true") == 0){
-   sleep(20);
+ if(system("dumpsys power |grep mHoldingDisplaySuspendBlocker=false") == 0){
+   sleep(30);
  }else{
   sleep(2);
   if (system("pidof dev.ukanth.ufirewall") != 0) {
